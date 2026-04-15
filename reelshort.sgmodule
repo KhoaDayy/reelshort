@@ -1,0 +1,10 @@
+#!name=ReelShort VIP Bypass
+#!desc=Unlock all episodes, VIP, coins & HD on ReelShort App
+#!system=ios
+#!author=Hasukatsu
+
+[Script]
+ReelShortBypass = type=http-response, pattern=^https:\/\/v-api\.crazymaplestudios\.com\/api\/(video|ms|comm)\/(book|chapter|coin|coin-bag|store|user|earn-reward|hall|search|advert|app|sys|activity|iap|interactiveBook|tapjoy|trafficGuidance|video|usercenter|rec|reward|novel|comic), script-path=reelshort.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% v-api.crazymaplestudios.com, *.crazymaplestudios.com, *.reelshort.com
